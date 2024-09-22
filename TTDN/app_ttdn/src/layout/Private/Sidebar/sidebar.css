@@ -1,0 +1,26 @@
+.sidebar-menu .ant-menu-submenu-popup {
+  background-color: white !important;
+}
+
+.sidebar-menu .ant-menu-submenu-popup .ant-menu-sub {
+  background-color: white !important;
+}
+
+.sidebar-menu .ant-menu-sub {
+  background-color: white !important;
+}
+
+.drawer-menu .ant-drawer-body {
+  overflow: hidden;
+}
+
+.drawer-menu {
+  width: 100% !important;
+}
+
+@media (min-width: 768px) {
+  .drawer-menu,
+  .drawer-menu .ant-drawer-content-wrapper {
+    width: 256px !important;
+  }
+}
