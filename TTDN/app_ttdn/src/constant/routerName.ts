@@ -6,12 +6,8 @@ export const publicRoutesName = {
 
 export const privateRoutesName = {
   dashboard: '/',
-  delivery: '/delivery',
-  device: '/device',
-  device_menu: '/device-menu',
-  device_type: '/device-type',
-  setting: '/setting',
-  user: '/user',
-  division: '/division',
+  internship: '/internship',
   department: '/department',
+  advisor: '/advisor',
+  student: '/student',
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Departmemt = () => {
-  return <div>Departmemt</div>;
+const Department = () => {
+  return <div>Department</div>;
 };
 
-export default Departmemt;
+export default Department;

@@ -34,8 +34,8 @@ export const sideBarMenuItem: MenuItem[] = [
     type: 'group',
     children: [
       {
-        key: privateRoutesName.delivery,
-        label: <Link to={privateRoutesName.delivery}>Quản lý thực tập</Link>,
+        key: privateRoutesName.internship,
+        label: <Link to={privateRoutesName.internship}>Quản lý thực tập</Link>,
         icon: <AcademicCapIcon className='w-5 h-5' />,
       },
     ],
@@ -49,18 +49,18 @@ export const sideBarMenuItem: MenuItem[] = [
     type: 'group',
     children: [
       {
-        key: privateRoutesName.division,
-        label: <Link to={privateRoutesName.division}>Bộ môn</Link>,
+        key: privateRoutesName.department,
+        label: <Link to={privateRoutesName.department}>Bộ môn</Link>,
         icon: <UserGroupIcon className='w-5 h-5' />,
       },
       {
-        key: 'transport_vehicle',
-        label: <Link to='#'>Giảng viên hướng dẫn</Link>,
+        key: privateRoutesName.advisor,
+        label: <Link to={privateRoutesName.advisor}>Giảng viên hướng dẫn</Link>,
         icon: <UsersIcon className='w-5 h-5' />,
       },
       {
-        key: 'quota',
-        label: <Link to='#'>Sinh viên</Link>,
+        key: privateRoutesName.student,
+        label: <Link to={privateRoutesName.student}>Sinh viên</Link>,
         icon: <UserIcon className='w-5 h-5' />,
       },
     ],

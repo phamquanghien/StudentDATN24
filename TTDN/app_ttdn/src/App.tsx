@@ -17,7 +17,6 @@ function App() {
         token: {
           colorPrimary: '#54b2fe',
           fontSize: 16,
-
           fontFamily: 'Inter var, sans-serif',
         },
       }}>
