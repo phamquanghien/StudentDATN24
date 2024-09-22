@@ -1,0 +1,20 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.no-hover-button:hover {
+  background: transparent!important;
+}
+
+.custom-dropdown .ant-dropdown-menu {
+  min-width: 120px; 
+}
+
+.custom-dropdown .ant-dropdown-menu .ant-dropdown-menu-item  {
+ padding: 8px 12px ;
+ font-size: 16px;
+}
+
+.ant-select-selector {
+  border-radius: 5px !important;
+}
