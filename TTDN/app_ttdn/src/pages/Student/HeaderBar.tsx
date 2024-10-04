@@ -6,16 +6,22 @@ interface HeaderBarProps {
   label: string;
   keyword: string;
   setKeyword: React.Dispatch<React.SetStateAction<string>>;
+  handleCreate: () => void;
 }
 
 const HeaderBar: React.FC<HeaderBarProps> = ({
   label,
   setKeyword,
   keyword,
+  handleCreate,
 }) => {
   return (
     <div className='flex justify-between gap-2 mb-4'>
-      <Button type='primary'>{label}</Button>
+      <Button
+        type='primary'
+        onClick={handleCreate}>
+        {label}
+      </Button>
       <Input
         placeholder='Tìm kiếm'
         className='w-96'
@@ -23,6 +29,11 @@ const HeaderBar: React.FC<HeaderBarProps> = ({
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
       />
+      <Button
+        type='primary'
+        onClick={handleCreate}>
+        Nhập từ Excel
+      </Button>
     </div>
   );
 };

@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import HeaderBar from './HeaderBar';
 import { Table } from 'antd';
 import ActionMenu from '@/components/ActionMenu';
+import useDebounce from '@/feature/hooks';
+import ModalStudent from './ModalStudent';
 
 const Student = () => {
   const [keyword, setKeyword] = useState<string>('');
+  const [visible, setVisible] = useState<boolean>(false);
+  const debouncedKeyword = useDebounce(keyword, 500);
 
   const data = [
     {
@@ -92,6 +96,7 @@ const Student = () => {
         label='Thêm sinh viên'
         setKeyword={setKeyword}
         keyword={keyword}
+        handleCreate={() => setVisible(true)}
       />
       <div className='bg-white p-2 rounded-xl'>
         <Table<any>
@@ -99,6 +104,10 @@ const Student = () => {
           dataSource={data}
         />
       </div>
+      <ModalStudent
+        open={visible}
+        onClose={() => setVisible(false)}
+      />
     </>
   );
 };
