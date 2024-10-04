@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { Menu, Layout } from 'antd';
 import './sidebar.css';
 import { icons } from '@/constant/icons';
@@ -30,17 +30,11 @@ const Sidebar: React.FC<SideBarProps> = ({
   collapsed,
   setCollapsed,
 }) => {
-  const defaultOpenKeys = [
-    'report_all',
-    'report',
-    'arise',
-    'category',
-    'customer',
-    'transport_vehicle',
-    'quota',
-    'personnel',
-    'settings',
-  ];
+  const [selectedKeys, setSelectedKeys] = useState<string>('/');
+  useLayoutEffect(() => {
+    const path = window.location.pathname;
+    setSelectedKeys(path);
+  }, []);
 
   return (
     <Sider
@@ -67,7 +61,7 @@ const Sidebar: React.FC<SideBarProps> = ({
         mode='inline'
         className='h-screen bg-white sidebar-menu select-none'
         items={items}
-        defaultOpenKeys={defaultOpenKeys}
+        selectedKeys={[selectedKeys]}
       />
     </Sider>
   );

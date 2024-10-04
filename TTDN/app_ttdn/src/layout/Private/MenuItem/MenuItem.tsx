@@ -29,7 +29,7 @@ export const sideBarMenuItem: MenuItem[] = [
     type: 'divider',
   },
   {
-    key: 'arise',
+    key: 'intern',
     label: 'Thực tập',
     type: 'group',
     children: [
