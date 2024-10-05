@@ -1,6 +1,12 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import { Button, Input } from 'antd';
+import { Button, Dropdown, Input, MenuProps } from 'antd';
 import React from 'react';
+import {
+  CalendarOutlined,
+  FileExcelOutlined,
+  DownOutlined,
+  PlusOutlined,
+} from '@ant-design/icons';
 
 interface HeaderBarProps {
   label: string;
@@ -15,25 +21,30 @@ const HeaderBar: React.FC<HeaderBarProps> = ({
   keyword,
   handleCreate,
 }) => {
+  const items: MenuProps['items'] = [
+    {
+      label: 'Nhập từ Excel',
+      key: '1',
+      icon: <FileExcelOutlined />,
+      onClick: () => console.log('Nhập từ Excel'),
+    },
+  ];
   return (
     <div className='flex justify-between gap-2 mb-4'>
-      <Button
+      <Dropdown.Button
         type='primary'
+        icon={<DownOutlined />}
+        menu={{ items }}
         onClick={handleCreate}>
-        {label}
-      </Button>
+        <PlusOutlined /> {label}
+      </Dropdown.Button>
       <Input
         placeholder='Tìm kiếm'
-        className='w-96'
+        // className='w-96'
         prefix={<MagnifyingGlassIcon className='w-5 h-5 text-gray-400' />}
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
       />
-      <Button
-        type='primary'
-        onClick={handleCreate}>
-        Nhập từ Excel
-      </Button>
     </div>
   );
 };

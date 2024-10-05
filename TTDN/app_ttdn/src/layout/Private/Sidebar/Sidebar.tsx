@@ -34,7 +34,7 @@ const Sidebar: React.FC<SideBarProps> = ({
   useLayoutEffect(() => {
     const path = window.location.pathname;
     setSelectedKeys(path);
-  }, []);
+  }, [location.pathname]);
 
   return (
     <Sider
