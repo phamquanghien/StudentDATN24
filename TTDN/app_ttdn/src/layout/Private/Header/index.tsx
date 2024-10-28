@@ -14,7 +14,7 @@ import {
   ArrowLeftStartOnRectangleIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
-import { icons } from '../../../constant/icons';
+import { icons } from '@/constant/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 const { Header } = Layout;

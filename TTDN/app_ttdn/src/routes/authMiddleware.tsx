@@ -23,7 +23,7 @@ const Authmiddleware = (props: AuthmiddlewareProps) => {
     const getAuthentication = async () => {
       try {
         if (!token) {
-          navigate('/login');
+          // navigate('/login');
         }
       } catch (error) {
         if (token) {

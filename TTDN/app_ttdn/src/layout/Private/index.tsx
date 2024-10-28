@@ -20,7 +20,7 @@ const PrivateLayout: React.FC<PrivateLayoutProps> = ({ children }) => {
   };
 
   return (
-    <Layout className='min-h-screen'>
+    <Layout>
       <Sidebar
         items={sideBarMenuItem}
         collapsed={collapsed}
@@ -31,9 +31,9 @@ const PrivateLayout: React.FC<PrivateLayoutProps> = ({ children }) => {
         open={drawerVisible}
         setOpen={() => setDrawerVisible((prevState) => !prevState)}
       />
-      <Layout className='transition-all duration-200'>
+      <Layout className='transition-all duration-200 flex flex-col h-screen'>
         <AppHeader toggleDrawer={toggleDrawer} />
-        <Content className=' h-full m-4 rounded-xl'>{children}</Content>
+        <Content className='m-4 flex-1 overflow-y-hidden'>{children}</Content>
       </Layout>
     </Layout>
   );
