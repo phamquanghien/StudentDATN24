@@ -16,8 +16,8 @@ const CountBar = () => {
           preview={false}
         />
         <div className='ml-5'>
-          <h2 className='text-xl font-bold'>Tổng sinh viên</h2>
-          <p className='text-gray-500'>50</p>
+          <h2 className='text-gray-500'>Tổng sinh viên</h2>
+          <p className=''>50</p>
         </div>
         <div className='absolute right-2'>
           <FontAwesomeIcon icon={faAngleRight} />
@@ -31,8 +31,8 @@ const CountBar = () => {
           preview={false}
         />
         <div className='ml-5'>
-          <h2 className='text-xl font-bold'>Hoàn thành thực tập</h2>
-          <p className='text-gray-500'>9</p>
+          <h2 className='text-gray-500'>Hoàn thành thực tập</h2>
+          <p className=''>9</p>
         </div>
         <div className='absolute right-2'>
           <FontAwesomeIcon icon={faAngleRight} />
@@ -46,8 +46,8 @@ const CountBar = () => {
           preview={false}
         />
         <div className='ml-5'>
-          <h2 className='text-xl font-bold'>Đang thực tập</h2>
-          <p className='text-gray-500'>40</p>
+          <h2 className='text-gray-500'>Đang thực tập</h2>
+          <p className=''>40</p>
         </div>
         <div className='absolute right-2'>
           <FontAwesomeIcon icon={faAngleRight} />
@@ -61,8 +61,8 @@ const CountBar = () => {
           preview={false}
         />
         <div className='ml-5'>
-          <h2 className='text-xl font-semibold'>Không đạt</h2>
-          <p className='text-gray-500'>1</p>
+          <h2 className='text-gray-500'>Không đạt</h2>
+          <p className=''>1</p>
         </div>
         <div className='absolute right-2'>
           <FontAwesomeIcon icon={faAngleRight} />

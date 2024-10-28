@@ -3,18 +3,134 @@
 @import "tailwindcss/utilities";
 
 .no-hover-button:hover {
-  background: transparent!important;
+    background: transparent !important;
 }
 
 .custom-dropdown .ant-dropdown-menu {
-  min-width: 120px; 
+    min-width: 120px;
 }
 
-.custom-dropdown .ant-dropdown-menu .ant-dropdown-menu-item  {
- padding: 8px 12px ;
- font-size: 16px;
+.custom-dropdown .ant-dropdown-menu .ant-dropdown-menu-item {
+    padding: 8px 12px;
+    font-size: 16px;
 }
 
 .ant-select-selector {
-  border-radius: 5px !important;
+    border-radius: 5px !important;
+}
+
+
+.ant-table-thead > tr > th {
+    border-radius: 0px !important;
+    background-color: #f0f2f4 !important;
+    border-bottom: 0.5px solid rgb(214, 214, 214) !important;
+    color: black !important;
+    padding: 8px 8px !important;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td {
+    padding: 5px 8px;
+}
+
+.row-hover-bg-none .ant-table-tbody > tr:hover > td {
+    background: unset !important;
+}
+
+.row-border-b-none .ant-table-tbody > tr > td {
+    border-bottom: none !important;
+}
+
+/*Tabs*/
+.ant-tabs.ant-tabs-top > .ant-tabs-nav {
+    margin-bottom: 0 !important;
+}
+
+.ant-tabs .ant-tabs-tab {
+    padding: 12px 0px 8px 0px !important;
+}
+
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    font-weight: 500 !important;
+}
+
+/*Table Full Height*/
+.table-h-full {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.table-h-full .ant-spin-nested-loading,
+.table-h-full .ant-spin-container,
+.table-h-full .ant-table {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.table-h-full .ant-table-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.table-h-full .ant-table-body {
+    flex: 1;
+    overflow-y: auto !important;
+}
+
+/*SCROLL BAR====================================================================*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    margin: 5px;
+    border-radius: 3px;
+    background-color: rgb(218, 218, 218);
+}
+
+::-webkit-scrollbar-button {
+    width: 12px;
+    background-color: #f1f1f1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
+}
+
+::-webkit-scrollbar-button:vertical:start {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='55' height='55' viewBox='0 0 24 24'%3E%3Cpath fill='%23bdbdbd' d='M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19'/%3E%3C/svg%3E");
+}
+
+::-webkit-scrollbar-button:vertical:end {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='55' height='55' viewBox='0 0 24 24'%3E%3Cpath fill='%23bdbdbd' d='M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569z'/%3E%3C/svg%3E");
+}
+
+::-webkit-scrollbar-button:horizontal:start {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='55' height='55' viewBox='0 0 24 24'%3E%3Cpath fill='%23bdbdbd' d='m4.431 12.822l13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645'/%3E%3C/svg%3E");
+}
+
+::-webkit-scrollbar-button:horizontal:end {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='55' height='55' viewBox='0 0 24 24'%3E%3Cpath fill='%23bdbdbd' d='M5.536 21.886a1 1 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886'/%3E%3C/svg%3E");
+}
+
+.ant-table-body {
+    scrollbar-width: auto;
+    scrollbar-color: auto;
+}
+
+.no-radius-table {
+    .ant-table-container {
+        border-radius: 0;
+    }
 }

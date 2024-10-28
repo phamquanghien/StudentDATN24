@@ -10,4 +10,7 @@ export const privateRoutesName = {
   department: '/department',
   advisor: '/advisor',
   student: '/student',
+  subcribeAdvisor: '/subcribe-advisor',
+  subcribeTopic: '/subcribe-advisor',
+  subcribeCompany: '/subcribe-advisor',
 };
