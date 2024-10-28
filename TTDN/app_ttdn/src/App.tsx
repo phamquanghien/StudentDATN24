@@ -10,9 +10,16 @@ import './index.css';
 import 'font-awesome/css/font-awesome.min.css';
 import { ConfigProvider } from 'antd';
 
+import viVN from 'antd/es/locale/vi_VN';
+import dayjs from 'dayjs';
+import 'dayjs/locale/vi';
+
+dayjs.locale('vi');
+
 function App() {
   return (
     <ConfigProvider
+      locale={viVN}
       theme={{
         token: {
           colorPrimary: '#54b2fe',

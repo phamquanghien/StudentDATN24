@@ -14,7 +14,7 @@ const Student = () => {
     {
       id: 1,
       name: 'Nguyễn Văn A',
-      age: 'B20DCCN001',
+      age: '2021050192',
       address: '0123456789',
       email: '',
       position: 'Hà Nội',
@@ -22,7 +22,7 @@ const Student = () => {
     {
       id: 2,
       name: 'Nguyễn Văn B',
-      age: 'B20DCCN002',
+      age: '2021050193',
       address: '0123456789',
       email: '',
       position: 'Hà Nội',
@@ -30,7 +30,7 @@ const Student = () => {
     {
       id: 3,
       name: 'Nguyễn Văn C',
-      age: 'B20DCCN003',
+      age: '2021050194',
       address: '0123456789',
       email: '',
       position: 'Hà Nội',
@@ -38,7 +38,7 @@ const Student = () => {
     {
       id: 4,
       name: 'Nguyễn Văn D',
-      age: 'B20DCCN004',
+      age: '2021050195',
       address: '0123456789',
       email: '',
       position: 'Hà Nội',
@@ -46,7 +46,7 @@ const Student = () => {
     {
       id: 5,
       name: 'Nguyễn Văn E',
-      age: 'B20DCCN005',
+      age: '2021050196',
       address: '0123456789',
       email: '',
       position: 'Hà Nội',

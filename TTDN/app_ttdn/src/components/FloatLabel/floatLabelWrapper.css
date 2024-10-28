@@ -43,7 +43,7 @@
 .float-label .as-label {
   top: -8px;
   font-size: 14px !important;
-  background: white;
+  background: transparent;
   padding: 0 4px;
   margin-left: -4px;
   transform: translateY(0);

@@ -45,6 +45,30 @@ export const sideBarMenuItem: MenuItem[] = [
   },
   {
     key: 'category',
+    label: 'Thao tác',
+    type: 'group',
+    children: [
+      {
+        key: privateRoutesName.department,
+        label: (
+          <Link to={privateRoutesName.department}>Đăng ký giảng viên</Link>
+        ),
+        icon: <UserGroupIcon className='w-5 h-5' />,
+      },
+      {
+        key: privateRoutesName.advisor,
+        label: <Link to={privateRoutesName.advisor}>Đăng ký đề tài</Link>,
+        icon: <UsersIcon className='w-5 h-5' />,
+      },
+      {
+        key: privateRoutesName.student,
+        label: <Link to={privateRoutesName.student}>Điểm</Link>,
+        icon: <UserIcon className='w-5 h-5' />,
+      },
+    ],
+  },
+  {
+    key: 'category',
     label: 'Danh mục',
     type: 'group',
     children: [
