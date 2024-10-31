@@ -2,6 +2,7 @@ import React from 'react';
 import HeaderBar from "@/pages/Student/HeaderBar.tsx";
 import {Table} from "antd";
 import ActionMenu from "@/components/ActionMenu.tsx";
+import axios from "axios";
 
 const Advisor = () => {
     const [keyword, setKeyword] = React.useState('');
@@ -81,6 +82,19 @@ const Advisor = () => {
         },
     ];
 
+    const getapi = () => {
+
+        axios.get('http://localhost:5269/api/BoMon', {
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        }).then((res) => {
+            console.log(res);
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+
     return <div className='h-full flex flex-col justify-between'>
         <HeaderBar
             label={'Thêm giảng viên'}
@@ -89,6 +103,7 @@ const Advisor = () => {
             handleCreate={() => {
             }}
         />
+        {/*<Button onClick={getapi}>test api</Button>*/}
         <div className='h-full flex flex-col justify-between bg-white p-4 rounded-xl'>
             <Table columns={columns} dataSource={data} className='table-h-full no-radius-table'/>
         </div>
