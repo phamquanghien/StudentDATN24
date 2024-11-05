@@ -1,6 +1,12 @@
-export const site = 'http://localhost:3105';
+export const site = "http://localhost:5075";
 
 //------------------------------------------------------------------------------------------------------------//
 
 // Auth
-export const LOGIN = `${site}/api/v1/auth/login`;
+export const LOGIN = `${site}/api/Account/login`;
+
+// Department
+export const DEPARTMENT = `${site}/api/Department`;
+
+// Advisor
+export const ADVISOR = `${site}/api/Advisor`;

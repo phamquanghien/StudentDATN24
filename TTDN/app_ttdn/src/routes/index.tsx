@@ -6,21 +6,24 @@ import Dashboard from '@/pages/Dashboard';
 import Department from '@/pages/Department';
 import Advisor from '@/pages/Advisor';
 import Student from '@/pages/Student';
+import NotFoundPage from "@/pages/Authentication/NotFoundPage.tsx";
 
 //Public Routes
 const publicRoutes = [
-  { path: '/login', component: Login },
-  { path: '/verify-email', component: VerifyEmail },
-  { path: '/forgot-password', component: ForgotPassword },
+    {path: '/login', component: Login},
+    {path: '/verify-email', component: VerifyEmail},
+    {path: '/forgot-password', component: ForgotPassword},
+    {path: '*', component: NotFoundPage}
+
 ];
 
 //Private Routes
 const privateRoutes = [
-  { path: '/', component: Dashboard },
-  { path: '/internship', component: Internship },
-  { path: '/department', component: Department },
-  { path: '/advisor', component: Advisor },
-  { path: '/student', component: Student },
+    {path: '/', component: Dashboard},
+    {path: '/internship', component: Internship},
+    {path: '/department', component: Department},
+    {path: '/advisor', component: Advisor},
+    {path: '/student', component: Student},
 ];
 
-export { publicRoutes, privateRoutes };
+export {publicRoutes, privateRoutes};
