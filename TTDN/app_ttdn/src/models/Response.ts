@@ -1,4 +1,4 @@
-import { AxiosError } from 'axios';
+import { AxiosError } from "axios";
 
 export interface IDeleteResponse {
   success: boolean;
@@ -17,4 +17,9 @@ export interface ApiResponsePagination<T> {
   totalPages: number;
   currentPage: number;
   items: T[];
+}
+
+export interface DeleteApiResponse {
+  success: boolean;
+  message: string;
 }

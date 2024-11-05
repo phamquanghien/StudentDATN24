@@ -1,6 +1,6 @@
 .float-label {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 /* Đảm bảo chiều cao của input và select */
@@ -10,43 +10,44 @@
 .float-label .ant-input-textarea,
 .float-label .ant-select,
 .float-label .ant-select-selector {
-  box-sizing: border-box;
-  width: 100%;
-  height: 40px;
-  transition: padding 0.2s ease;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    transition: padding 0.2s ease;
 }
 
 /* Flexbox để căn giữa theo chiều dọc trong Select */
 .float-label .ant-select-selector {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 /* Styling cho nhãn (label) */
 .float-label .label {
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: 0.2s ease all;
-  z-index: 1;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s ease all;
+    z-index: 1;
 }
 
 /* Placeholder style */
 .float-label .as-placeholder {
-  color: gray;
+    color: gray;
 }
 
 /* Khi nhãn nổi lên */
 .float-label .as-label {
-  top: -8px;
-  font-size: 14px !important;
-  background: transparent;
-  padding: 0 4px;
-  margin-left: -4px;
-  transform: translateY(0);
+    top: -14px;
+    font-size: 14px !important;
+    color: gray;
+    background: white;
+    padding: 0 4px;
+    margin-left: -4px;
+    transform: translateY(0);
 }
 
 /* Cố định thêm padding cho phần tử input và select khi nhãn nổi */
@@ -56,26 +57,26 @@
 .float-label.active .ant-input-textarea,
 .float-label.active .ant-select-selection-item,
 .float-label.active .ant-select-selection-search-input {
-  padding-top: 12px !important;
+    padding-top: 12px !important;
 }
 
 .float-label .ant-select-selection-item {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding-top: 12px !important;
-  padding-bottom: 2px !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 12px !important;
+    padding-bottom: 2px !important;
 }
 
 .float-label .ant-select-selection-placeholder,
 .float-label .ant-select-selection-item {
-  height: 40px;
-  padding-top: 12px !important;
-  padding-bottom: 2px !important;
-  display: flex;
-  align-items: center;
+    height: 40px;
+    padding-top: 12px !important;
+    padding-bottom: 2px !important;
+    display: flex;
+    align-items: center;
 }
 
 .float-label.inactive .label {
-  display: none;
+    display: none;
 }

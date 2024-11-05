@@ -1,19 +1,19 @@
 export type AuthType = {
-  user: string;
-  pass: string;
+    email: string;
+    password: string;
+    rememberMe: boolean;
 };
 
 export type AuthResponseLoginType = {
-  success: boolean;
-  message: string;
-  token: string;
+    userName: string;
+    token: string;
 };
 
 export type ActiveType = {
-  email: string;
+    email: string;
 };
 
 export type OtpType = {
-  email: string;
-  otp: string;
+    email: string;
+    otp: string;
 };

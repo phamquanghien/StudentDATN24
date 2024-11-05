@@ -1,113 +1,85 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import HeaderBar from "@/pages/Student/HeaderBar.tsx";
-import {Table} from "antd";
+import { Table } from "antd";
 import ActionMenu from "@/components/ActionMenu.tsx";
-import axios from "axios";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { getAdvisorsRequest } from "@/store/Advisor/slice.ts";
+import { RootState } from "@/store";
 
 const Advisor = () => {
-    const [keyword, setKeyword] = React.useState('');
+  const [keyword, setKeyword] = React.useState("");
+  const dispatch = useDispatch();
 
-    const columns: any = [
-        {
-            title: 'STT',
-            dataIndex: 'stt',
-            align: 'center',
-            key: 'stt',
-            render: (text: any, record: any, index: number) => index + 1,
-        },
-        {
-            title: 'Họ tên',
-            dataIndex: 'name',
-            key: 'name',
-        },
-        {
-            title: 'Mã giảng viên',
-            dataIndex: 'advisorId',
-            key: 'advisorId',
-        },
-        {
-            title: 'Email',
-            dataIndex: 'email',
-            key: 'email',
-        },
-        {
-            title: 'Số điện thoại',
-            dataIndex: 'phone',
-            key: 'phone',
-        },
-        {
-            title: 'Chức vụ',
-            dataIndex: 'position',
-            key: 'position',
-        },
-        {
-            dataIndex: 'action',
+  const { advisors } = useSelector(
+    (state: RootState) => ({
+      advisors: state.Advisor.advisors.data,
+    }),
+    shallowEqual,
+  );
 
-            key: 'action',
-            align: 'right',
-            render: () => (
-                <ActionMenu/>
-            ),
-        },
-    ];
+  const columns: any = [
+    {
+      title: "STT",
+      dataIndex: "stt",
+      align: "center",
+      key: "stt",
+      render: (text: any, record: any, index: number) => index + 1,
+    },
+    {
+      title: "Họ tên",
+      dataIndex: "name",
+      key: "name",
+    },
+    {
+      title: "Mã giảng viên",
+      dataIndex: "code",
+      key: "code",
+    },
+    {
+      title: "Email",
+      dataIndex: "email",
+      key: "email",
+    },
+    {
+      title: "Số điện thoại",
+      dataIndex: "phone",
+      key: "phone",
+    },
+    {
+      title: "Bộ môn",
+      dataIndex: "departmentID",
+      key: "departmentID",
+    },
+    {
+      dataIndex: "action",
 
-    const data: any = [
-        {
-            advisorId: 'GV001',
-            name: 'Nguyễn Văn A',
-            email: '',
-            phone: '',
-            position: 'Giảng viên',
-        },
-        {
-            advisorId: 'GV002',
-            name: 'Nguyễn Văn B',
-            email: '',
-            phone: '',
-            position: 'Giảng viên',
-        },
-        {
-            advisorId: 'GV003',
-            name: 'Nguyễn Văn C',
-            email: '',
-            phone: '',
-            position: 'Giảng viên',
-        },
-        {
-            advisorId: 'GV004',
-            name: 'Nguyễn Văn D',
-            email: '',
-            phone: '',
-            position: 'Giảng viên'
-        },
-    ];
+      key: "action",
+      align: "right",
+      render: () => <ActionMenu />,
+    },
+  ];
 
-    const getapi = () => {
+  useEffect(() => {
+    dispatch(getAdvisorsRequest());
+  }, [dispatch]);
 
-        axios.get('http://localhost:5269/api/BoMon', {
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        }).then((res) => {
-            console.log(res);
-        }).catch((err) => {
-            console.log(err);
-        })
-    }
-
-    return <div className='h-full flex flex-col justify-between'>
-        <HeaderBar
-            label={'Thêm giảng viên'}
-            keyword={keyword}
-            setKeyword={setKeyword}
-            handleCreate={() => {
-            }}
+  return (
+    <div className="h-full flex flex-col justify-between">
+      <HeaderBar
+        label={"Thêm giảng viên"}
+        keyword={keyword}
+        setKeyword={setKeyword}
+        handleCreate={() => {}}
+      />
+      <div className="h-full flex flex-col justify-between bg-white p-4 rounded-xl">
+        <Table
+          columns={columns}
+          dataSource={advisors}
+          className="table-h-full no-radius-table"
         />
-        {/*<Button onClick={getapi}>test api</Button>*/}
-        <div className='h-full flex flex-col justify-between bg-white p-4 rounded-xl'>
-            <Table columns={columns} dataSource={data} className='table-h-full no-radius-table'/>
-        </div>
-    </div>;
+      </div>
+    </div>
+  );
 };
 
 export default Advisor;
