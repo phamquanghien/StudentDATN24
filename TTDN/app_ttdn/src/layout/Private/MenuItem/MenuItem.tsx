@@ -3,10 +3,10 @@ import { Link } from "react-router-dom"; // Import Link từ react-router-dom
 import { privateRoutesName } from "@/constant/routerName"; // Đảm bảo các route được import từ file routerName
 import {
   AcademicCapIcon,
+  BuildingLibraryIcon,
   ChartBarSquareIcon,
   UserGroupIcon,
   UserIcon,
-  UsersIcon,
 } from "@heroicons/react/24/outline";
 
 type MenuItem = Required<MenuProps>["items"][number];
@@ -36,6 +36,11 @@ export const sideBarMenuItem: MenuItem[] = [
         key: privateRoutesName.internship,
         label: <Link to={privateRoutesName.internship}>Quản lý thực tập</Link>,
         icon: <AcademicCapIcon className="w-5 h-5" />,
+      },
+      {
+        key: privateRoutesName.council,
+        label: <Link to={privateRoutesName.council}>Hội đồng</Link>,
+        icon: <UserGroupIcon className="w-5 h-5" />,
       },
     ],
   },
@@ -75,18 +80,18 @@ export const sideBarMenuItem: MenuItem[] = [
       {
         key: privateRoutesName.department,
         label: <Link to={privateRoutesName.department}>Bộ môn</Link>,
-        icon: <UserGroupIcon className="w-5 h-5" />,
+        icon: <BuildingLibraryIcon className="w-5 h-5" />,
       },
       {
         key: privateRoutesName.advisor,
         label: <Link to={privateRoutesName.advisor}>Giảng viên hướng dẫn</Link>,
-        icon: <UsersIcon className="w-5 h-5" />,
-      },
-      {
-        key: privateRoutesName.student,
-        label: <Link to={privateRoutesName.student}>Sinh viên</Link>,
         icon: <UserIcon className="w-5 h-5" />,
       },
+      // {
+      //   key: privateRoutesName.student,
+      //   label: <Link to={privateRoutesName.student}>Sinh viên</Link>,
+      //   icon: <UserIcon className="w-5 h-5" />,
+      // },
     ],
   },
 ];

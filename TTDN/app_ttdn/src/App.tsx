@@ -1,20 +1,18 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { publicRoutes } from './routes';
-import { privateRoutes } from './routes';
-import PrivateLayout from './layout/Private';
-import PublicLayout from './layout/Public';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { privateRoutes, publicRoutes } from "./routes";
+import PrivateLayout from "./layout/Private";
+import PublicLayout from "./layout/Public";
 
-import Authmiddleware from './routes/authMiddleware';
+import "./index.css";
+import "font-awesome/css/font-awesome.min.css";
+import { ConfigProvider } from "antd";
 
-import './index.css';
-import 'font-awesome/css/font-awesome.min.css';
-import { ConfigProvider } from 'antd';
+import viVN from "antd/es/locale/vi_VN";
+import dayjs from "dayjs";
+import "dayjs/locale/vi";
+import AuthMiddleware from "@/routes/authMiddleware.tsx";
 
-import viVN from 'antd/es/locale/vi_VN';
-import dayjs from 'dayjs';
-import 'dayjs/locale/vi';
-
-dayjs.locale('vi');
+dayjs.locale("vi");
 
 function App() {
   return (
@@ -22,11 +20,12 @@ function App() {
       locale={viVN}
       theme={{
         token: {
-          colorPrimary: '#54b2fe',
+          colorPrimary: "#54b2fe",
           fontSize: 16,
-          fontFamily: 'Inter var, sans-serif',
+          fontFamily: "Inter var, sans-serif",
         },
-      }}>
+      }}
+    >
       <BrowserRouter>
         <div>
           <Routes>
@@ -51,11 +50,11 @@ function App() {
                   key={index}
                   path={route.path}
                   element={
-                    <Authmiddleware>
+                    <AuthMiddleware>
                       <PrivateLayout>
                         <Page />
                       </PrivateLayout>
-                    </Authmiddleware>
+                    </AuthMiddleware>
                   }
                 />
               );

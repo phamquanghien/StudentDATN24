@@ -1,0 +1,34 @@
+.council__category__table {
+  .ant-table-container {
+    border-radius: 0;
+
+    .ant-table-cell {
+      &:first-child {
+        border-radius: 5px 0 0 5px;
+      }
+
+      &:last-child {
+        border-radius: 0 5px 5px 0;
+      }
+    }
+
+    .ant-table-cell-row-hover {
+      background-color: #54b2fe !important;
+    }
+
+    .selected-row {
+      .ant-btn {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.selection-input-advisor {
+  .ant-select-selector {
+    .ant-select-selection-item {
+      background: transparent;
+    }
+  }
+}
+
