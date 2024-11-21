@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import HeaderBar from "@/pages/Student/HeaderBar.tsx";
+import HeaderBar from "@/pages/Council/HeaderBar.tsx";
 import { notification, Table, Tooltip } from "antd";
 import ActionMenu from "@/components/ActionMenu.tsx";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";

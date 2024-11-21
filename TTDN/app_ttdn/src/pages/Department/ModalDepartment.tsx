@@ -168,7 +168,7 @@ const ModalDepartment: React.FC<ModalDepartmentProps> = ({
           rules={[
             {
               required: true,
-              message: "Vui lòng nhập email",
+              message: "Vui lòng nhập địa chỉ email",
             },
             {
               type: "email",

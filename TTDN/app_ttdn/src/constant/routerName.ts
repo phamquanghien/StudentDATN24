@@ -1,16 +1,13 @@
 export const publicRoutesName = {
-    login: '/login',
-    error_network: '/error_network',
-    error_404: '/error_404',
+  login: "/login",
+  error_network: "/error_network",
+  error_404: "/error_404",
 };
 
 export const privateRoutesName = {
-    dashboard: '/',
-    internship: '/internship',
-    department: '/department',
-    advisor: '/advisor',
-    student: '/student',
-    // subcribeAdvisor: '/subcribe-advisor',
-    // subcribeTopic: '/subcribe-advisor',
-    // subcribeCompany: '/subcribe-advisor',
+  dashboard: "/",
+  internship: "/internship",
+  department: "/department",
+  advisor: "/advisor",
+  council: "/council",
 };

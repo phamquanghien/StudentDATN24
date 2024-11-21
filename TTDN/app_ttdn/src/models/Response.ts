@@ -13,13 +13,19 @@ export interface ApiResponse<T> {
 }
 
 export interface ApiResponsePagination<T> {
-  totalItems: number;
+  pageNumber: number;
+  pageSize: number;
   totalPages: number;
-  currentPage: number;
+  totalRecords: number;
   items: T[];
 }
 
 export interface DeleteApiResponse {
+  success: boolean;
+  message: string;
+}
+
+export interface SuccessMessageResponse {
   success: boolean;
   message: string;
 }
